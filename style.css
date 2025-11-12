@@ -1,182 +1,128 @@
+/* General Styling */
 body {
-  /* Make the whole website background white */
-body {
-  background-color: white;
-  color: yellowish; /* optional: sets normal text color */
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(120deg, #0f0f0f, #1e1e2f, #2c1b3c);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
 }
 
-header {
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #181818;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-header h1 {
-  color: gold;
-  letter-spacing: 1px;
-}
-
-nav a {
-  color: hsl(0, 0%, 87%);
-  margin-left: 1.5rem;
+.navbar a {
+  color: #ffffffcc;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: gold;
-}
-
-section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.project {
-  background: #129cdc;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid gold;
-  border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  background: #181818;
-  padding: 1rem;
-  color: #999;
-}
-  #about h2 {
-  color: rgb(0, 255, 204);
-  font-weight: bold;
-  font-style: italic;
-  font-size: 40px;
-}
- .logo {
-  width: 60px;         /* Change size as you want */
-  border-radius: 10px;  /* Optional: rounds the corners */
-  display: circle;
-  margin: 10px auto;    /* Centers the image */
-}
-/* Center the logo perfectly */
-.logo-container {
-  text-align: center;    /* Centers the image horizontally */
-  margin: 20px 0;        /* Adds space above and below */
+.navbar a:hover {
+  color: #00ffff;
 }
 
 .logo {
-  width: 180px;          /* Adjust logo size */
-  border-radius: 12px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Optional: Fade-in effect */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-}
-.download-btn {
-  display: inline-block;
-  background-color: royalblue;
-  color: white;
   font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 15px;
+  font-size: 1.3rem;
 }
 
-.download-btn:hover {
-  background-color: #4b0082; /* a deep elegant purple */
-  transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-}
-#subjects {
-  background-color: #fff;
-  padding: 4rem 2rem;
+/* Hero Section */
+.hero {
   text-align: center;
+  padding: 100px 20px;
 }
 
-.subjects-grid {
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero p {
+  color: #cccccc;
+  margin: 15px 0 25px;
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.05);
+}
+
+/* Subject Cards */
+.subjects {
   display: flex;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  padding: 40px;
+  gap: 30px;
 }
 
 .subject-card {
-  background: #f2f2f2;
-  border-radius: 15px;
-  padding: 1.5rem;
-  width: 300px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  backdrop-filter: blur(5px);
 }
 
 .subject-card:hover {
-  transform: translateY(-5px);
-  background: #e6f0ff;
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00ffff88;
 }
 
-.subject-card h3 {
-  color: #0077ff;
-  font-size: 24px;
-  margin-bottom: 0.5rem;
-}
-
-.subject-card p {
-  color: #333;
-  font-size: 16px;
-}
-
-.subject-card a {
+.btn-card {
   display: inline-block;
-  margin-top: 1rem;
-  color: #0055cc;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.subject-card a:hover {
-  text-decoration: underline;
-}
-.sub-topic {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #1e1e1e;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.sub-topic h4 {
-  color: #6a0dad;
-  font-size: 22px;
-}
-
-.download-btn {
-  display: inline-block;
-  background: linear-gradient(90deg, #4b0082, #6a0dad);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #00ffff;
+  color: black;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
 }
 
-.download-btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #6a0dad, #4b0082);
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  border-top: 1px solid #333;
 }
 
-
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
