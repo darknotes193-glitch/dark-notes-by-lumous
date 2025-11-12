@@ -126,3 +126,105 @@ footer {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+/* Explore Page Styling */
+.explore-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.explore-hero h1 {
+  font-size: 2.3rem;
+  color: #00ffff;
+  animation: fadeInUp 1.2s ease;
+}
+
+.explore-hero p {
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.explore-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Subject Sections */
+.subject-section {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.subject-section h2 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffff88;
+}
+
+.subject-section p {
+  color: #bbbbbb;
+  font-size: 1rem;
+}
+
+/* Topic Cards */
+.topic-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.topic-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  backdrop-filter: blur(5px);
+}
+
+.topic-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #00ffff88;
+}
+
+/* PDF Buttons */
+.pdf-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 10px #00ffff;
+  transition: 0.3s;
+}
+
+.pdf-btn:hover {
+  box-shadow: 0 0 25px #00ffff;
+  transform: scale(1.05);
+}
+
+.pdf-btn.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* PDF List */
+.pdf-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.pdf-list li {
+  margin: 8px 0;
+}
+
+
