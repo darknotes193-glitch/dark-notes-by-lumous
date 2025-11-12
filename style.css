@@ -2,7 +2,7 @@ body {
   /* Make the whole website background white */
 body {
   background-color: white;
-  color: black; /* optional: sets normal text color */
+  color: yellowish; /* optional: sets normal text color */
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -178,4 +178,5 @@ footer {
   transform: scale(1.05);
   background: linear-gradient(90deg, #6a0dad, #4b0082);
 }
+
 
